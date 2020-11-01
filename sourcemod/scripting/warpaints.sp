@@ -7,7 +7,6 @@
 #include <sourcemod>
 #include <tf2items>
 #include <tf2idb>
-#include <tf2attributes>
 
 #pragma newdecls required
 
@@ -40,7 +39,7 @@ public Plugin myinfo =
 	author = "StrikeR14",
 	description = "",
 	version = "1.0",
-	url = "https://steamcommunity.com/id/kenmaskimmeod"
+	url = ""
 };
 
 public void OnPluginStart()
