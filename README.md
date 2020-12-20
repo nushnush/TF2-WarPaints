@@ -4,7 +4,6 @@ Allows players to set any existing warpaint on their weapon.
 # Requirements / Dependencies
 
 - [TF2Items](https://forums.alliedmods.net/showthread.php?p=1050170)
-- [TF2IDB](https://forums.alliedmods.net/showthread.php?t=255885)
 
 # Commands
 
