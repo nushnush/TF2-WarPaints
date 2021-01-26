@@ -22,7 +22,7 @@ public Plugin myinfo =
 	name = "[TF2] Warpaint Skins",
 	author = "StrikeR14",
 	description = "Apply warpaint skins!",
-	version = "1.1",
+	version = "1.1.1",
 	url = "https://steamcommunity.com/id/kenmaskimmeod/"
 };
 
@@ -65,7 +65,9 @@ public Action SetSkin(int client, int args)
 
 	if(!IsValidWarpaint(skin))
 	{
-		ReplyToCommand(client, "[SM] Unavailable skin id (%i). Available values: 200-215, 217, 218, 220, 221, 223-226, 228, 230, 232, 234-273, 300-310.", skin);
+		PrintToChat(client, "[SM] Unavailable skin id (%i).", skin);
+		PrintToChat(client, "[SM] Available values: 102, 104-106, 109, 112-114, 112, 130, 139, 143, 144, 151, 160, 161, 163,");
+		PrintToChat(client, "[SM] Available values: 200-215, 217, 218, 220, 221, 223-226, 228, 230, 232, 234-273, 300-310.");
 		return Plugin_Handled;
 	}
 
@@ -102,6 +104,8 @@ bool FindInDef(const int def)
 
 bool IsValidWarpaint(const int war)
 {
-	return (200 <= war <= 283 && war != 216 && war != 219 && war != 222 && war != 227 && war != 229 && war != 231 && war != 233 && war != 274)
+	return (102 <= war <= 114 && war != 103 && war != 107 && war != 108 && war != 110 && war != 111) 
+	|| war == 122 || war == 130 || war == 139 || war == 143 || war == 144 || war == 151 || war == 160 || war == 161 || war == 163
+	|| (200 <= war <= 283 && war != 216 && war != 219 && war != 222 && war != 227 && war != 229 && war != 231 && war != 233 && war != 274)
 	|| (300 <= war <= 310);
 }
